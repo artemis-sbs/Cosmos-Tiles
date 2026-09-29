@@ -1,0 +1,66 @@
+name: Release tile packs
+on:
+  push:
+    tags:
+      - "*"
+jobs:
+  # The pack list is read straight from __lib__.json ("zip"), so adding a pack folder
+  # there ships it - the matrix cannot drift out of sync with the local `sbs lib` build.
+  setup:
+    runs-on: ubuntu-latest
+    outputs:
+      matrix: ${{ steps.set.outputs.matrix }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build pack matrix from __lib__.json
+        id: set
+        run: echo "matrix=$(jq -c '.zip' __lib__.json)" >> "$GITHUB_OUTPUT"
+
+  build:
+    runs-on: ubuntu-latest
+    needs: setup
+    strategy:
+      matrix:
+        item: ${{ fromJson(needs.setup.outputs.matrix) }}
+    env:
+      # Exactly what `sbs lib` writes into __lib__ and what a mission's story.json pins
+      # under `shared_media`: {owner}.{repo}.{pack}.{tag}.zip. `sbs fetch` downloads it
+      # from github.com/{owner}/{repo}/releases/download/{tag}/.
+      ASSET: ${{ github.repository_owner }}.${{ github.event.repository.name }}.${{ matrix.item }}.${{ github.ref_name }}.zip
+    steps:
+      - uses: actions/checkout@v4
+      # FLAT, matching `sbs lib`: the pack is unpacked as it is, so a nested archive
+      # would land as <pack>/<pack>/tileart/... and no set would be found.
+      - name: Archive pack (flat)
+        env:
+          SRC: ${{ matrix.item }}
+        run: python .github/zip_flat.py "$SRC" "$ASSET"
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: '${{ matrix.item }}'
+          path: ${{ env.ASSET }}
+          retention-days: 1
+
+  release:
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Download all artifacts
+        uses: actions/download-artifact@v4
+        with:
+          path: artifacts
+      # ncipollo finds a release by tag even when a re-pointed tag has demoted it to a
+      # draft, and re-publishes that one rather than creating another (the LM lesson).
+      - name: Upload packs to the release
+        uses: ncipollo/release-action@v1
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          artifacts: "artifacts/*/*"
+          tag: ${{ github.ref_name }}
+          allowUpdates: true
+          replacesArtifacts: true
+          draft: false
+          makeLatest: true
+          omitBodyDuringUpdate: true
+          omitNameDuringUpdate: true
