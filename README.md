@@ -7,8 +7,9 @@ another. Each pack is a media pack you pin in a mission. It contains no code.
 | Pack | Set name | What is in it |
 |---|---|---|
 | `frontier` | `frontier` | Planet surfaces, colonies and outposts: desert, salt flats, caves, lava; prefab buildings; crew, colonists, salvagers, the Skaraan; camp and survey kit; Precursor ruins |
+| `station` | `station` | Space-station and ship interiors: deck floors, bulkheads and hull, doors and hatches; the bridge, crew quarters, medbay and cryo, cargo and engineering; the crew who work there |
 
-More packs (station interiors, towns...) will join. They all share one vocabulary, so
+More packs (towns, ship exteriors...) will join. They all share one vocabulary, so
 a mission can use several at once and a later pack can redraw an earlier pack's keys.
 
 ## Using a pack
@@ -16,7 +17,8 @@ a mission can use several at once and a later pack can redraw an earlier pack's 
 1. Pin it in the mission's `story.json`, with the release tag you want:
 
    ```json
-   "shared_media": ["artemis-sbs.Cosmos-Tiles.frontier.v0.1.0.zip"]
+   "shared_media": ["artemis-sbs.Cosmos-Tiles.frontier.v0.3.0.zip",
+                    "artemis-sbs.Cosmos-Tiles.station.v0.3.0.zip"]
    ```
 
    `sbs fetch` downloads it from this repository's releases.
@@ -24,7 +26,7 @@ a mission can use several at once and a later pack can redraw an earlier pack's 
 2. Select the set in `settings.yaml` (or a profile):
 
    ```yaml
-   TILE_ART: frontier
+   TILE_ART: frontier, station      # later sets win key by key
    ```
 
 3. Load the art where the mission sets up its tiles:
