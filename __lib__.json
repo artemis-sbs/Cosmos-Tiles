@@ -2,6 +2,8 @@
     "version": "v0.4.0",
     "zip": [
         "frontier",
-        "station"
+        "station",
+        "city",
+        "countryside"
     ]
 }

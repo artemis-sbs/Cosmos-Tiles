@@ -8,8 +8,10 @@ another. Each pack is a media pack you pin in a mission. It contains no code.
 |---|---|---|
 | `frontier` | `frontier` | Planet surfaces, colonies and outposts: desert, salt flats, caves, lava; prefab buildings; crew, colonists, salvagers, the Skaraan; camp and survey kit; Precursor ruins |
 | `station` | `station` | Space-station and ship interiors: deck floors, bulkheads and hull with viewports, doors that slide open; the bridge, crew quarters, galley, medbay, labs, lounges, brig, cargo and bays; a ship's systems and its damage (fire and sparks that flicker); the crew of each Cosmos race and the people who board them. Draws the boarding decks sbs_utils generates from any ship's interior plan |
+| `city` | `city` | A sci-fi town: roads, crossings, sidewalks, plazas, parks; building fronts with windows and shop doors; street furniture, market stalls, holograms, neon, vehicles; townsfolk |
+| `countryside` | `countryside` | Green country: grass and meadow, dirt and gravel lanes, ploughed fields with crops, wheat, ponds; orchards and woods; barns, farmhouses, greenhouses, silos, a windmill; fences, hay, farmyard kit, tractors |
 
-More packs (towns, ship exteriors...) will join. They all share one vocabulary, so
+More packs will join. They all share one vocabulary, so
 a mission can use several at once and a later pack can redraw an earlier pack's keys.
 
 ## Using a pack
