@@ -29,6 +29,13 @@ jobs:
       ASSET: ${{ github.repository_owner }}.${{ github.event.repository.name }}.${{ matrix.item }}.${{ github.ref_name }}.zip
     steps:
       - uses: actions/checkout@v4
+      # A 3D pack's ship data names its art by the folder THIS release unpacks to, which
+      # carries the tag: published for another tag, every piece asserts on the first
+      # client that draws it. Tile packs have no ships/ and pass.
+      - name: Check art roots
+        env:
+          SRC: ${{ matrix.item }}
+        run: python .github/check_artroots.py "$SRC" "$ASSET"
       # FLAT, matching `sbs lib`: the pack is unpacked as it is, so a nested archive
       # would land as <pack>/<pack>/tileart/... and no set would be found.
       - name: Archive pack (flat)

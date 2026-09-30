@@ -10,6 +10,7 @@ another. Each pack is a media pack you pin in a mission. It contains no code.
 | `station` | `station` | Space-station and ship interiors: deck floors, bulkheads and hull with viewports, doors that slide open; the bridge, crew quarters, galley, medbay, labs, lounges, brig, cargo and bays; a ship's systems and its damage (fire and sparks that flicker); the crew of each Cosmos race and the people who board them. Draws the boarding decks sbs_utils generates from any ship's interior plan |
 | `city` | `city` | A sci-fi town: roads, crossings, sidewalks, plazas, parks; building fronts with windows and shop doors; street furniture, market stalls, holograms, neon, vehicles; townsfolk |
 | `countryside` | `countryside` | Green country: grass and meadow, dirt and gravel lanes, ploughed fields with crops, wheat, ponds; orchards and woods; barns, farmhouses, greenhouses, silos, a windmill; fences, hay, farmyard kit, tractors |
+| `ruins` | `ruins` | **3D, not tiles**: kit pieces (OBJ meshes with their own palette textures) that sbs_utils builds relic interiors from - walls, floors, ceilings, trims, pillars, set pieces and finds in five styles (`torgoth`, `kralien`, `choir`, `hulk`, `cave`), the Storm's Beacon items and pieces, and a portrait of each (`pic:<piece>`) |
 
 More packs will join. They all share one vocabulary, so
 a mission can use several at once and a later pack can redraw an earlier pack's keys.
@@ -47,6 +48,28 @@ A mission should keep its own `builtin` set that draws every key it uses. A pack
 overlays that set key by key, so the mission still plays on a machine without the
 pack. See `sbs_utils/procedural/tilemap_art.py` for the manifest format.
 
+## Using the 3D pack (`ruins`)
+
+`ruins` is geometry the engine draws in space, not tile art. It ships `ships/` - an OBJ,
+.mtl and four palette PNGs per piece, `ruins_kit.json` (what each piece is and how big)
+and `ruins_ships.json` (the ship data the engine reads) - and `tileart/ruins/`, a
+portrait of every piece.
+
+1. Pin it under `shared_media` like any pack:
+   `"artemis-sbs.Cosmos-Tiles.ruins.<tag>.zip"`.
+2. Turn on mod ship data: `EXTRA_SHIP_DATA: true` in `settings.yaml`.
+3. Load it at the mission's TOP LEVEL, before any client connects:
+   `volume_kit_load("ruins")` (sbs_utils). It checks every piece's art is on disk, tells
+   the engine about the ship data, and registers each kit as a relic wall style - a relic
+   then says `Walls: torgoth, plates` and falls back to plates without the pack.
+4. Portraits load like tile art: `tilemap_art_use("ruins")`, then `pic:tg_wall_a`,
+   `pic:find_manifest`, `pic:beacon_voice`...
+
+Each piece's `artfileroot` names the folder this release unpacks to
+(`data/missions/__lib__/media/artemis-sbs.Cosmos-Tiles.ruins.<tag>/ships/<key>`), so a
+pack unpacked under another name is refused by `volume_kit_load` rather than crashing a
+client. The release workflow checks the roots match the tag before it zips.
+
 ## The vocabulary
 
 - `fig:<model>` are people and creatures, named for what they are (`fig:junker_m`,
@@ -82,4 +105,6 @@ mirrored on about half the cells and a field of them repeats less. Trees do not:
 twin is lit from the other side, and a tree's long shadow shows it. Older sbs_utils
 ignores the field.
 
-The art is rendered from Synty POLYGON assets.
+The art is rendered from Synty POLYGON assets. The `ruins` pieces are derived works:
+Synty geometry, simplified and kitbashed, recoloured with our own palette textures (no
+Synty texture pixels), plus geometry of our own.

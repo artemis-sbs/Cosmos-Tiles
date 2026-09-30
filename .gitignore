@@ -1,2 +1,9 @@
 __pycache__/
 *.zip
+# Derived engine art: the engine writes these beside an OBJ the first time it DRAWS it,
+# with its own install's paths inside. Never committed, never released.
+*.paxmesh
+*.pointcube
+*.rawbitmap
+*/ships/*1024.png
+*/ships/*256.png

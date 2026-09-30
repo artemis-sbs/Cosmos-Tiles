@@ -1,0 +1,961 @@
+{
+ "version": 1,
+ "pack": "ruins",
+ "ships": "ruins_ships",
+ "units_per_metre": 10,
+ "pieces": {
+  "ruins_tg_wall_a": {
+   "kind": "wall",
+   "kit": "torgoth",
+   "size": [
+    50.0,
+    50.0,
+    8.97
+   ],
+   "tris": 238
+  },
+  "ruins_tg_wall_b": {
+   "kind": "wall",
+   "kit": "torgoth",
+   "size": [
+    50.0,
+    50.0,
+    8.92
+   ],
+   "tris": 364
+  },
+  "ruins_tg_wall_c": {
+   "kind": "wall",
+   "kit": "torgoth",
+   "size": [
+    50.0,
+    50.0,
+    6.01
+   ],
+   "tris": 280
+  },
+  "ruins_tg_floor_a": {
+   "kind": "floor",
+   "kit": "torgoth",
+   "size": [
+    50.0,
+    50.0,
+    2.12
+   ],
+   "tris": 890
+  },
+  "ruins_tg_floor_b": {
+   "kind": "floor",
+   "kit": "torgoth",
+   "size": [
+    50.0,
+    50.0,
+    2.14
+   ],
+   "tris": 340
+  },
+  "ruins_tg_ceiling_a": {
+   "kind": "ceiling",
+   "kit": "torgoth",
+   "size": [
+    50.0,
+    50.0,
+    10.34
+   ],
+   "tris": 1357
+  },
+  "ruins_tg_trim_a": {
+   "kind": "trim",
+   "kit": "torgoth",
+   "size": [
+    50.0,
+    8.02,
+    3.51
+   ],
+   "tris": 582
+  },
+  "ruins_tg_pillar_a": {
+   "kind": "pillar",
+   "kit": "torgoth",
+   "size": [
+    15.49,
+    50.91,
+    15.37
+   ],
+   "tris": 98
+  },
+  "ruins_tg_gate": {
+   "kind": "setpiece",
+   "kit": "torgoth",
+   "size": [
+    80.3,
+    52.13,
+    15.49
+   ],
+   "tris": 412
+  },
+  "ruins_tg_cradle": {
+   "kind": "setpiece",
+   "kit": "torgoth",
+   "size": [
+    23.67,
+    37.49,
+    28.15
+   ],
+   "tris": 2910
+  },
+  "ruins_tg_console": {
+   "kind": "setpiece",
+   "kit": "torgoth",
+   "size": [
+    36.66,
+    24.95,
+    21.23
+   ],
+   "tris": 2910
+  },
+  "ruins_tg_statue": {
+   "kind": "setpiece",
+   "kit": "torgoth",
+   "size": [
+    13.24,
+    24.21,
+    8.65
+   ],
+   "tris": 2909
+  },
+  "ruins_tg_slate": {
+   "kind": "find",
+   "kit": "torgoth",
+   "size": [
+    52.68,
+    60.0,
+    7.37
+   ],
+   "tris": 114
+  },
+  "ruins_tg_cache": {
+   "kind": "find",
+   "kit": "torgoth",
+   "size": [
+    60.0,
+    45.78,
+    36.64
+   ],
+   "tris": 352
+  },
+  "ruins_kr_wall_a": {
+   "kind": "wall",
+   "kit": "kralien",
+   "size": [
+    50.0,
+    50.0,
+    6.23
+   ],
+   "tris": 166
+  },
+  "ruins_kr_wall_b": {
+   "kind": "wall",
+   "kit": "kralien",
+   "size": [
+    50.0,
+    50.0,
+    8.6
+   ],
+   "tris": 544
+  },
+  "ruins_kr_wall_c": {
+   "kind": "wall",
+   "kit": "kralien",
+   "size": [
+    50.0,
+    50.0,
+    16.25
+   ],
+   "tris": 382
+  },
+  "ruins_kr_floor_a": {
+   "kind": "floor",
+   "kit": "kralien",
+   "size": [
+    50.0,
+    50.0,
+    0.16
+   ],
+   "tris": 540
+  },
+  "ruins_kr_floor_b": {
+   "kind": "floor",
+   "kit": "kralien",
+   "size": [
+    50.0,
+    50.0,
+    0.31
+   ],
+   "tris": 131
+  },
+  "ruins_kr_ceiling_a": {
+   "kind": "ceiling",
+   "kit": "kralien",
+   "size": [
+    50.0,
+    50.0,
+    2.1
+   ],
+   "tris": 604
+  },
+  "ruins_kr_trim_a": {
+   "kind": "trim",
+   "kit": "kralien",
+   "size": [
+    50.0,
+    1.66,
+    4.56
+   ],
+   "tris": 132
+  },
+  "ruins_kr_pillar_a": {
+   "kind": "pillar",
+   "kit": "kralien",
+   "size": [
+    14.62,
+    75.68,
+    12.54
+   ],
+   "tris": 104
+  },
+  "ruins_kr_collar": {
+   "kind": "setpiece",
+   "kit": "kralien",
+   "size": [
+    100.38,
+    103.49,
+    22.38
+   ],
+   "tris": 2910
+  },
+  "ruins_kr_column": {
+   "kind": "setpiece",
+   "kit": "kralien",
+   "size": [
+    37.53,
+    64.23,
+    37.53
+   ],
+   "tris": 924
+  },
+  "ruins_kr_optics": {
+   "kind": "setpiece",
+   "kit": "kralien",
+   "size": [
+    26.86,
+    28.59,
+    26.86
+   ],
+   "tris": 2124
+  },
+  "ruins_ch_wall_a": {
+   "kind": "wall",
+   "kit": "choir",
+   "size": [
+    50.0,
+    50.0,
+    12.51
+   ],
+   "tris": 1158
+  },
+  "ruins_ch_wall_b": {
+   "kind": "wall",
+   "kit": "choir",
+   "size": [
+    50.0,
+    50.0,
+    12.67
+   ],
+   "tris": 1269
+  },
+  "ruins_ch_wall_c": {
+   "kind": "wall",
+   "kit": "choir",
+   "size": [
+    50.07,
+    50.0,
+    12.51
+   ],
+   "tris": 1746
+  },
+  "ruins_ch_floor_a": {
+   "kind": "floor",
+   "kit": "choir",
+   "size": [
+    50.0,
+    50.0,
+    5.03
+   ],
+   "tris": 872
+  },
+  "ruins_ch_floor_b": {
+   "kind": "floor",
+   "kit": "choir",
+   "size": [
+    50.0,
+    50.0,
+    6.77
+   ],
+   "tris": 872
+  },
+  "ruins_ch_ceiling_a": {
+   "kind": "ceiling",
+   "kit": "choir",
+   "size": [
+    50.0,
+    50.0,
+    1.25
+   ],
+   "tris": 101
+  },
+  "ruins_ch_trim_a": {
+   "kind": "trim",
+   "kit": "choir",
+   "size": [
+    50.0,
+    4.66,
+    10.27
+   ],
+   "tris": 330
+  },
+  "ruins_ch_pillar_a": {
+   "kind": "pillar",
+   "kit": "choir",
+   "size": [
+    6.98,
+    30.0,
+    6.96
+   ],
+   "tris": 872
+  },
+  "ruins_ch_votive": {
+   "kind": "setpiece",
+   "kit": "choir",
+   "size": [
+    26.02,
+    31.94,
+    28.23
+   ],
+   "tris": 950
+  },
+  "ruins_ch_mural": {
+   "kind": "setpiece",
+   "kit": "choir",
+   "size": [
+    44.28,
+    30.07,
+    5.64
+   ],
+   "tris": 1844
+  },
+  "ruins_ch_brazier": {
+   "kind": "setpiece",
+   "kit": "choir",
+   "size": [
+    17.96,
+    20.16,
+    17.96
+   ],
+   "tris": 849
+  },
+  "ruins_ch_false_voice": {
+   "kind": "setpiece",
+   "kit": "choir",
+   "size": [
+    23.67,
+    37.49,
+    28.15
+   ],
+   "tris": 2910
+  },
+  "ruins_hk_wall_a": {
+   "kind": "wall",
+   "kit": "hulk",
+   "size": [
+    50.0,
+    50.0,
+    7.13
+   ],
+   "tris": 516
+  },
+  "ruins_hk_wall_b": {
+   "kind": "wall",
+   "kit": "hulk",
+   "size": [
+    50.0,
+    50.0,
+    6.21
+   ],
+   "tris": 176
+  },
+  "ruins_hk_wall_c": {
+   "kind": "wall",
+   "kit": "hulk",
+   "size": [
+    50.0,
+    50.0,
+    12.84
+   ],
+   "tris": 872
+  },
+  "ruins_hk_floor_a": {
+   "kind": "floor",
+   "kit": "hulk",
+   "size": [
+    50.0,
+    50.0,
+    2.17
+   ],
+   "tris": 176
+  },
+  "ruins_hk_floor_b": {
+   "kind": "floor",
+   "kit": "hulk",
+   "size": [
+    50.0,
+    50.0,
+    4.19
+   ],
+   "tris": 873
+  },
+  "ruins_hk_ceiling_a": {
+   "kind": "ceiling",
+   "kit": "hulk",
+   "size": [
+    50.0,
+    50.0,
+    17.81
+   ],
+   "tris": 1357
+  },
+  "ruins_hk_trim_a": {
+   "kind": "trim",
+   "kit": "hulk",
+   "size": [
+    50.0,
+    1.96,
+    1.43
+   ],
+   "tris": 112
+  },
+  "ruins_hk_pillar_a": {
+   "kind": "pillar",
+   "kit": "hulk",
+   "size": [
+    20.0,
+    50.0,
+    20.0
+   ],
+   "tris": 270
+  },
+  "ruins_hk_gantry": {
+   "kind": "setpiece",
+   "kit": "hulk",
+   "size": [
+    50.6,
+    68.91,
+    50.6
+   ],
+   "tris": 1428
+  },
+  "ruins_hk_plate_stack": {
+   "kind": "setpiece",
+   "kit": "hulk",
+   "size": [
+    28.61,
+    26.32,
+    52.88
+   ],
+   "tris": 1234
+  },
+  "ruins_hk_lamp": {
+   "kind": "setpiece",
+   "kit": "hulk",
+   "size": [
+    14.18,
+    39.44,
+    34.59
+   ],
+   "tris": 2328
+  },
+  "ruins_cv_wall_a": {
+   "kind": "wall",
+   "kit": "cave",
+   "size": [
+    49.84,
+    49.66,
+    12.16
+   ],
+   "tris": 872
+  },
+  "ruins_cv_wall_b": {
+   "kind": "wall",
+   "kit": "cave",
+   "size": [
+    50.0,
+    50.0,
+    4.98
+   ],
+   "tris": 872
+  },
+  "ruins_cv_wall_c": {
+   "kind": "wall",
+   "kit": "cave",
+   "size": [
+    50.0,
+    50.0,
+    8.5
+   ],
+   "tris": 872
+  },
+  "ruins_cv_floor_a": {
+   "kind": "floor",
+   "kit": "cave",
+   "size": [
+    50.0,
+    50.0,
+    5.07
+   ],
+   "tris": 873
+  },
+  "ruins_cv_floor_b": {
+   "kind": "floor",
+   "kit": "cave",
+   "size": [
+    50.0,
+    50.0,
+    10.0
+   ],
+   "tris": 467
+  },
+  "ruins_cv_ceiling_a": {
+   "kind": "ceiling",
+   "kit": "cave",
+   "size": [
+    49.98,
+    49.95,
+    15.08
+   ],
+   "tris": 872
+  },
+  "ruins_cv_trim_a": {
+   "kind": "trim",
+   "kit": "cave",
+   "size": [
+    49.81,
+    5.15,
+    17.98
+   ],
+   "tris": 582
+  },
+  "ruins_cv_pillar_a": {
+   "kind": "pillar",
+   "kit": "cave",
+   "size": [
+    14.47,
+    32.38,
+    13.84
+   ],
+   "tris": 52
+  },
+  "ruins_cv_obelisk": {
+   "kind": "setpiece",
+   "kit": "cave",
+   "size": [
+    18.8,
+    106.2,
+    11.73
+   ],
+   "tris": 2374
+  },
+  "ruins_cv_statue": {
+   "kind": "setpiece",
+   "kit": "cave",
+   "size": [
+    17.8,
+    15.46,
+    11.5
+   ],
+   "tris": 2974
+  },
+  "ruins_cv_rubble": {
+   "kind": "setpiece",
+   "kit": "cave",
+   "size": [
+    24.31,
+    10.22,
+    20.94
+   ],
+   "tris": 1940
+  },
+  "ruins_find_torgoth_salvage": {
+   "kind": "find",
+   "kit": "torgoth",
+   "size": [
+    60.0,
+    30.29,
+    32.91
+   ],
+   "tris": 484
+  },
+  "ruins_find_manifest": {
+   "kind": "find",
+   "kit": "torgoth",
+   "size": [
+    50.23,
+    60.0,
+    13.52
+   ],
+   "tris": 230
+  },
+  "ruins_find_kralien_optics": {
+   "kind": "find",
+   "kit": "kralien",
+   "size": [
+    59.75,
+    28.56,
+    60.0
+   ],
+   "tris": 264
+  },
+  "ruins_find_slate": {
+   "kind": "find",
+   "kit": "kralien",
+   "size": [
+    60.0,
+    42.67,
+    4.8
+   ],
+   "tris": 484
+  },
+  "ruins_find_relay_salvage": {
+   "kind": "find",
+   "kit": "cave",
+   "size": [
+    60.0,
+    51.23,
+    33.9
+   ],
+   "tris": 484
+  },
+  "ruins_find_rod": {
+   "kind": "find",
+   "kit": "cave",
+   "size": [
+    60.0,
+    8.33,
+    8.33
+   ],
+   "tris": 476
+  },
+  "ruins_find_cut_plate": {
+   "kind": "find",
+   "kit": "hulk",
+   "size": [
+    31.94,
+    13.08,
+    60.0
+   ],
+   "tris": 484
+  },
+  "ruins_find_order": {
+   "kind": "find",
+   "kit": "hulk",
+   "size": [
+    38.28,
+    60.0,
+    6.88
+   ],
+   "tris": 96
+  },
+  "ruins_find_chart": {
+   "kind": "find",
+   "kit": "cave",
+   "size": [
+    60.0,
+    60.0,
+    4.87
+   ],
+   "tris": 484
+  },
+  "ruins_find_ash_salvage": {
+   "kind": "find",
+   "kit": "cave",
+   "size": [
+    60.0,
+    21.97,
+    39.87
+   ],
+   "tris": 484
+  },
+  "ruins_find_votive": {
+   "kind": "find",
+   "kit": "choir",
+   "size": [
+    60.0,
+    60.0,
+    5.8
+   ],
+   "tris": 484
+  },
+  "ruins_find_choir_salvage": {
+   "kind": "find",
+   "kit": "choir",
+   "size": [
+    60.0,
+    18.66,
+    59.59
+   ],
+   "tris": 484
+  },
+  "ruins_find_sink_salvage": {
+   "kind": "find",
+   "kit": "cave",
+   "size": [
+    60.0,
+    58.12,
+    54.35
+   ],
+   "tris": 428
+  },
+  "ruins_find_traffic": {
+   "kind": "find",
+   "kit": "cave",
+   "size": [
+    60.0,
+    51.45,
+    7.72
+   ],
+   "tris": 252
+  },
+  "ruins_beacon_voice": {
+   "kind": "piece",
+   "kit": "torgoth",
+   "size": [
+    69.67,
+    160.0,
+    69.67
+   ],
+   "tris": 3395
+  },
+  "ruins_beacon_lens": {
+   "kind": "piece",
+   "kit": "kralien",
+   "size": [
+    155.2,
+    160.0,
+    105.54
+   ],
+   "tris": 3394
+  },
+  "ruins_beacon_cipher": {
+   "kind": "piece",
+   "kit": "cave",
+   "size": [
+    160.0,
+    136.11,
+    160.0
+   ],
+   "tris": 3394
+  },
+  "ruins_beacon_heart": {
+   "kind": "piece",
+   "kit": "hulk",
+   "size": [
+    160.0,
+    119.97,
+    160.0
+   ],
+   "tris": 3394
+  },
+  "ruins_test_f": {
+   "kind": "test",
+   "kit": "torgoth",
+   "size": [
+    33.0,
+    50.0,
+    10.0
+   ],
+   "tris": 36
+  }
+ },
+ "kits": {
+  "torgoth": {
+   "scale": 8.0,
+   "wall": [
+    "ruins_tg_wall_a",
+    "ruins_tg_wall_b",
+    "ruins_tg_wall_c"
+   ],
+   "floor": [
+    "ruins_tg_floor_a",
+    "ruins_tg_floor_b"
+   ],
+   "ceiling": [
+    "ruins_tg_ceiling_a"
+   ],
+   "trim": [
+    "ruins_tg_trim_a"
+   ],
+   "pillar": [
+    "ruins_tg_pillar_a"
+   ],
+   "setpieces": [
+    "ruins_tg_gate",
+    "ruins_tg_cradle",
+    "ruins_tg_console",
+    "ruins_tg_statue"
+   ],
+   "finds": [
+    "ruins_tg_slate",
+    "ruins_tg_cache",
+    "ruins_find_torgoth_salvage",
+    "ruins_find_manifest"
+   ],
+   "pieces": [
+    "ruins_beacon_voice"
+   ]
+  },
+  "kralien": {
+   "scale": 8.0,
+   "wall": [
+    "ruins_kr_wall_a",
+    "ruins_kr_wall_b",
+    "ruins_kr_wall_c"
+   ],
+   "floor": [
+    "ruins_kr_floor_a",
+    "ruins_kr_floor_b"
+   ],
+   "ceiling": [
+    "ruins_kr_ceiling_a"
+   ],
+   "trim": [
+    "ruins_kr_trim_a"
+   ],
+   "pillar": [
+    "ruins_kr_pillar_a"
+   ],
+   "setpieces": [
+    "ruins_kr_collar",
+    "ruins_kr_column",
+    "ruins_kr_optics"
+   ],
+   "finds": [
+    "ruins_find_kralien_optics",
+    "ruins_find_slate"
+   ],
+   "pieces": [
+    "ruins_beacon_lens"
+   ]
+  },
+  "choir": {
+   "scale": 5.33,
+   "wall": [
+    "ruins_ch_wall_a",
+    "ruins_ch_wall_b",
+    "ruins_ch_wall_c"
+   ],
+   "floor": [
+    "ruins_ch_floor_a",
+    "ruins_ch_floor_b"
+   ],
+   "ceiling": [
+    "ruins_ch_ceiling_a"
+   ],
+   "trim": [
+    "ruins_ch_trim_a"
+   ],
+   "pillar": [
+    "ruins_ch_pillar_a"
+   ],
+   "setpieces": [
+    "ruins_ch_votive",
+    "ruins_ch_mural",
+    "ruins_ch_brazier",
+    "ruins_ch_false_voice"
+   ],
+   "finds": [
+    "ruins_find_votive",
+    "ruins_find_choir_salvage"
+   ],
+   "pieces": []
+  },
+  "hulk": {
+   "scale": 8.0,
+   "wall": [
+    "ruins_hk_wall_a",
+    "ruins_hk_wall_b",
+    "ruins_hk_wall_c"
+   ],
+   "floor": [
+    "ruins_hk_floor_a",
+    "ruins_hk_floor_b"
+   ],
+   "ceiling": [
+    "ruins_hk_ceiling_a"
+   ],
+   "trim": [
+    "ruins_hk_trim_a"
+   ],
+   "pillar": [
+    "ruins_hk_pillar_a"
+   ],
+   "setpieces": [
+    "ruins_hk_gantry",
+    "ruins_hk_plate_stack",
+    "ruins_hk_lamp"
+   ],
+   "finds": [
+    "ruins_find_cut_plate",
+    "ruins_find_order"
+   ],
+   "pieces": [
+    "ruins_beacon_heart"
+   ]
+  },
+  "cave": {
+   "scale": 6.0,
+   "wall": [
+    "ruins_cv_wall_a",
+    "ruins_cv_wall_b",
+    "ruins_cv_wall_c"
+   ],
+   "floor": [
+    "ruins_cv_floor_a",
+    "ruins_cv_floor_b"
+   ],
+   "ceiling": [
+    "ruins_cv_ceiling_a"
+   ],
+   "trim": [
+    "ruins_cv_trim_a"
+   ],
+   "pillar": [
+    "ruins_cv_pillar_a"
+   ],
+   "setpieces": [
+    "ruins_cv_obelisk",
+    "ruins_cv_statue",
+    "ruins_cv_rubble"
+   ],
+   "finds": [
+    "ruins_find_relay_salvage",
+    "ruins_find_rod",
+    "ruins_find_chart",
+    "ruins_find_ash_salvage",
+    "ruins_find_sink_salvage",
+    "ruins_find_traffic"
+   ],
+   "pieces": [
+    "ruins_beacon_cipher"
+   ]
+  }
+ }
+}
