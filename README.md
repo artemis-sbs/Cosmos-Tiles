@@ -19,8 +19,8 @@ a mission can use several at once and a later pack can redraw an earlier pack's 
 1. Pin it in the mission's `story.json`, with the release tag you want:
 
    ```json
-   "shared_media": ["artemis-sbs.Cosmos-Tiles.frontier.v0.4.0.zip",
-                    "artemis-sbs.Cosmos-Tiles.station.v0.4.0.zip"]
+   "shared_media": ["artemis-sbs.Cosmos-Tiles.frontier.v0.4.1.zip",
+                    "artemis-sbs.Cosmos-Tiles.station.v0.4.1.zip"]
    ```
 
    `sbs fetch` downloads it from this repository's releases.
@@ -70,5 +70,10 @@ from the missions folder; it builds the same zips into `__lib__`.
 `fig:reptile_chief`. `fig:skaraan` and `fig:skaraan_f` (in `station`) are the Skaraan as
 Cosmos draws them: blue-skinned humanoids. A mission that used the old keys and moves to
 v0.4.0 should switch to the `reptile` keys to keep its look.
+
+**v0.4.1: big props cover their ground.** Every prop's manifest entry has a `base`, the
+ground it stands on, and sbs_utils (v1.4.0 from 2026-09-30) blocks every cell a blocking
+prop mostly covers: a car blocks 1x3, the barn 5x7. Props that were drawn with their south
+end cut off (the barn's front wall, the cars' noses) are re-rendered whole.
 
 The art is rendered from Synty POLYGON assets.
