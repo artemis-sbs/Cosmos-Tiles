@@ -6,7 +6,7 @@ another. Each pack is a media pack you pin in a mission. It contains no code.
 
 | Pack | Set name | What is in it |
 |---|---|---|
-| `frontier` | `frontier` | Planet surfaces, colonies and outposts: desert, salt flats, caves, lava; prefab buildings; crew, colonists, salvagers, the Skaraan; camp and survey kit; Precursor ruins |
+| `frontier` | `frontier` | Planet surfaces, colonies and outposts: desert, salt flats, caves, lava; prefab buildings; crew, colonists, salvagers, big reptilian aliens; camp and survey kit; Precursor ruins |
 | `station` | `station` | Space-station and ship interiors: deck floors, bulkheads and hull with viewports, doors that slide open; the bridge, crew quarters, galley, medbay, labs, lounges, brig, cargo and bays; a ship's systems and its damage (fire and sparks that flicker); the crew of each Cosmos race and the people who board them. Draws the boarding decks sbs_utils generates from any ship's interior plan |
 | `city` | `city` | A sci-fi town: roads, crossings, sidewalks, plazas, parks; building fronts with windows and shop doors; street furniture, market stalls, holograms, neon, vehicles; townsfolk |
 | `countryside` | `countryside` | Green country: grass and meadow, dirt and gravel lanes, ploughed fields with crops, wheat, ponds; orchards and woods; barns, farmhouses, greenhouses, silos, a windmill; fences, hay, farmyard kit, tractors |
@@ -41,7 +41,7 @@ a mission can use several at once and a later pack can redraw an earlier pack's 
    tilemap_art_use(tileset="mymap")        # the mission's builtin set, then TILE_ART
    ```
 
-4. Name the shared keys in sprites: `Sprite: fig:skaraan_chief`, `Sprite: prop:crate`.
+4. Name the shared keys in sprites: `Sprite: fig:reptile_chief`, `Sprite: prop:crate`.
 
 A mission should keep its own `builtin` set that draws every key it uses. A pack
 overlays that set key by key, so the mission still plays on a machine without the
@@ -50,7 +50,7 @@ pack. See `sbs_utils/procedural/tilemap_art.py` for the manifest format.
 ## The vocabulary
 
 - `fig:<model>` are people and creatures, named for what they are (`fig:junker_m`,
-  `fig:skaraan_chief`, `fig:glassback`). Each has four facings (`_s _e _n _w`), each
+  `fig:reptile_chief`, `fig:glassback`). Each has four facings (`_s _e _n _w`), each
   standing (`_idle`) and in two strides (`_a`, `_b`), plus `_down`.
 - `prop:<thing>` are things that stand on a cell (`prop:crate`, `prop:hauler`,
   `prop:vault_door_open`).
@@ -64,5 +64,11 @@ Each pack's `tileart/<set>/manifest.json` lists every key it draws.
 Each release tag carries one zip per pack, built flat by the workflow from the folders
 listed in `__lib__.json`. To test a change locally, run `python sbs.pyz lib Cosmos-Tiles`
 from the missions folder; it builds the same zips into `__lib__`.
+
+**v0.4.0 renames keys.** The big reptilian aliens were `fig:skaraan`, `fig:skaraan_young` and
+`fig:skaraan_chief`; they are now `fig:reptile`, `fig:reptile_young` and
+`fig:reptile_chief`. `fig:skaraan` and `fig:skaraan_f` (in `station`) are the Skaraan as
+Cosmos draws them: blue-skinned humanoids. A mission that used the old keys and moves to
+v0.4.0 should switch to the `reptile` keys to keep its look.
 
 The art is rendered from Synty POLYGON assets.
