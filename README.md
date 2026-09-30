@@ -7,7 +7,7 @@ another. Each pack is a media pack you pin in a mission. It contains no code.
 | Pack | Set name | What is in it |
 |---|---|---|
 | `frontier` | `frontier` | Planet surfaces, colonies and outposts: desert, salt flats, caves, lava; prefab buildings; crew, colonists, salvagers, the Skaraan; camp and survey kit; Precursor ruins |
-| `station` | `station` | Space-station and ship interiors: deck floors, bulkheads and hull, doors and hatches; the bridge, crew quarters, galley, medbay, labs, lounges, brig, cargo and bays; a ship's systems and its damage; the crew and the people who board them. Draws the boarding decks sbs_utils generates from any ship's interior plan |
+| `station` | `station` | Space-station and ship interiors: deck floors, bulkheads and hull with viewports, doors that slide open; the bridge, crew quarters, galley, medbay, labs, lounges, brig, cargo and bays; a ship's systems and its damage (fire and sparks that flicker); the crew of each Cosmos race and the people who board them. Draws the boarding decks sbs_utils generates from any ship's interior plan |
 
 More packs (towns, ship exteriors...) will join. They all share one vocabulary, so
 a mission can use several at once and a later pack can redraw an earlier pack's keys.
@@ -17,8 +17,8 @@ a mission can use several at once and a later pack can redraw an earlier pack's 
 1. Pin it in the mission's `story.json`, with the release tag you want:
 
    ```json
-   "shared_media": ["artemis-sbs.Cosmos-Tiles.frontier.v0.3.0.zip",
-                    "artemis-sbs.Cosmos-Tiles.station.v0.3.0.zip"]
+   "shared_media": ["artemis-sbs.Cosmos-Tiles.frontier.v0.4.0.zip",
+                    "artemis-sbs.Cosmos-Tiles.station.v0.4.0.zip"]
    ```
 
    `sbs fetch` downloads it from this repository's releases.
