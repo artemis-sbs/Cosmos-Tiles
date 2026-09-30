@@ -19,8 +19,8 @@ a mission can use several at once and a later pack can redraw an earlier pack's 
 1. Pin it in the mission's `story.json`, with the release tag you want:
 
    ```json
-   "shared_media": ["artemis-sbs.Cosmos-Tiles.frontier.v0.4.1.zip",
-                    "artemis-sbs.Cosmos-Tiles.station.v0.4.1.zip"]
+   "shared_media": ["artemis-sbs.Cosmos-Tiles.frontier.v0.4.2.zip",
+                    "artemis-sbs.Cosmos-Tiles.station.v0.4.2.zip"]
    ```
 
    `sbs fetch` downloads it from this repository's releases.
@@ -75,5 +75,11 @@ v0.4.0 should switch to the `reptile` keys to keep its look.
 ground it stands on, and sbs_utils (v1.4.0 from 2026-09-30) blocks every cell a blocking
 prop mostly covers: a car blocks 1x3, the barn 5x7. Props that were drawn with their south
 end cut off (the barn's front wall, the cars' noses) are re-rendered whole.
+
+**v0.4.2: small props have mirrored twins.** Rocks, rubble, bushes, hay, crystal seams,
+potted plants and the like carry `"mirror": true`, so sbs_utils draws a still one
+mirrored on about half the cells and a field of them repeats less. Trees do not: a
+twin is lit from the other side, and a tree's long shadow shows it. Older sbs_utils
+ignores the field.
 
 The art is rendered from Synty POLYGON assets.
